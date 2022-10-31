@@ -26,6 +26,58 @@
       }
     `;
   }
+   if (
+    location.hostname === 'yuque.com' ||
+    location.hostname.endsWith('.yuque.com')
+  ) {
+    css += `
+    .ne-engine,
+    .ne-viewer-body,
+    .ne-toc-view,
+    .DocReader-module_title_fXOQi>h1,
+    .catalogTreeItem-module_title_snpKw{
+        font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
+          -apple-system, ui-sans-serif, sans-serif !important;
+    }
+    .cm-line,
+    ne-code-content{
+      font-family: 'JetBrains Mono', 'Noto Sans Mono CJK SC',
+        'Source Code Pro', 'Noto Mono', 'SF Mono', 'Roboto Mono', ui-monospace,
+        monospace, 'Segoe UI Symbol' !important;
+    }
+    `;
+  }
+   if (
+    location.hostname === 'bilibili.com' ||
+    location.hostname.endsWith('.bilibili.com')
+  ) {
+    css += `
+      .header-channel,
+      .channel-menu-mini,
+      .bb-comment,
+      .list-item .user .text-con,
+      .video-page-card-small .card-box .info .title,
+      .video-info-v1 .video-title,
+      .carousel-tool,
+      .bili-comment.browser-pc *,
+      .bili-dyn-content,
+      .bili-rich-text,
+      .bili-dyn-item,
+      .bili-video-card__info--bottom,
+      .bili-header,
+      .bili-video-card__info--tit,
+      .bili-video-card__info--tit a,
+      .browser-pc *,
+      .video-page-card-small .card-box .info .title,
+      .up-info-v1 .up-info_right .name,
+      .first-line-title,
+      .pl__head,
+      .pl__title{
+        font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
+          -apple-system, ui-sans-serif, sans-serif !important;
+      }
+    `;
+  }
   if (
     location.hostname === 'gitee.com' ||
     location.hostname.endsWith('.gitee.com')
