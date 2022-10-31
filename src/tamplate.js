@@ -9,13 +9,16 @@
 // @include *
 // ==/UserScript==
 
-(function() {
-  let css = "";
+(function () {
+  let css = '';
   css += `
 
   `;
 
-  if ((location.hostname === "baidu.com" || location.hostname.endsWith(".baidu.com"))) {
+  if (
+    location.hostname === 'baidu.com' ||
+    location.hostname.endsWith('.baidu.com')
+  ) {
     css += `
       * {
         font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
@@ -23,7 +26,23 @@
       }
     `;
   }
-  if ((location.hostname === "github.com" || location.hostname.endsWith(".github.com"))) {
+  if (
+    location.hostname === 'gitee.com' ||
+    location.hostname.endsWith('.gitee.com')
+  ) {
+    css += `
+    .file_holder .file_content.code .lines pre,
+    .file_holder .file_content.blame .lines pre {
+        font-family: 'JetBrains Mono', 'Noto Sans Mono CJK SC',
+        'Source Code Pro', 'Noto Mono', 'SF Mono', 'Roboto Mono', ui-monospace,
+        monospace, 'Segoe UI Symbol' !important;
+      }
+    `;
+  }
+  if (
+    location.hostname === 'github.com' ||
+    location.hostname.endsWith('.github.com')
+  ) {
     css += `
       .text-mono {
         font-family: 'JetBrains Mono', 'Noto Sans Mono CJK SC',
@@ -38,7 +57,10 @@
       }
     `;
   }
-  if ((location.hostname === "greasyfork.org" || location.hostname.endsWith(".greasyfork.org"))) {
+  if (
+    location.hostname === 'greasyfork.org' ||
+    location.hostname.endsWith('.greasyfork.org')
+  ) {
     css += `
       #script_version_code,
       .ace_editor {
@@ -48,7 +70,10 @@
       }
     `;
   }
-  if ((location.hostname === "ithome.com" || location.hostname.endsWith(".ithome.com"))) {
+  if (
+    location.hostname === 'ithome.com' ||
+    location.hostname.endsWith('.ithome.com')
+  ) {
     css += `
       .post_comment {
         font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
@@ -56,7 +81,10 @@
       }
     `;
   }
-  if ((location.hostname === "sspai.com" || location.hostname.endsWith(".sspai.com"))) {
+  if (
+    location.hostname === 'sspai.com' ||
+    location.hostname.endsWith('.sspai.com')
+  ) {
     css += `
       h1,
       h2,
@@ -74,7 +102,21 @@
     `;
   }
 
-  if (new RegExp("^(?:https://www\\.baidu\\.com/(s|#)?.*)\$").test(location.href) || new RegExp("^(?:https://(\\w+\\.)?bing\\.com/(search)?.*)\$").test(location.href) || new RegExp("^(?:https://www\\.google(\\.\\w+){1,2}/(search)?.*)\$").test(location.href) || new RegExp("^(?:https://www\\.so\\.com/s?.*)\$").test(location.href) || new RegExp("^(?:https://(www\\.)?sogou\\.com/(web|sogou)?.*)\$").test(location.href)) {
+  if (
+    new RegExp('^(?:https://www\\.baidu\\.com/(s|#)?.*)$').test(
+      location.href,
+    ) ||
+    new RegExp('^(?:https://(\\w+\\.)?bing\\.com/(search)?.*)$').test(
+      location.href,
+    ) ||
+    new RegExp('^(?:https://www\\.google(\\.\\w+){1,2}/(search)?.*)$').test(
+      location.href,
+    ) ||
+    new RegExp('^(?:https://www\\.so\\.com/s?.*)$').test(location.href) ||
+    new RegExp('^(?:https://(www\\.)?sogou\\.com/(web|sogou)?.*)$').test(
+      location.href,
+    )
+  ) {
     css += `
       * {
         font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
@@ -82,11 +124,13 @@
       }
     `;
   }
-  if (typeof GM_addStyle !== "undefined") {
+  if (typeof GM_addStyle !== 'undefined') {
     GM_addStyle(css);
   } else {
-    let styleNode = document.createElement("style");
+    let styleNode = document.createElement('style');
     styleNode.appendChild(document.createTextNode(css));
-    (document.querySelector("head") || document.documentElement).appendChild(styleNode);
+    (document.querySelector('head') || document.documentElement).appendChild(
+      styleNode,
+    );
   }
-  })();
+})();
