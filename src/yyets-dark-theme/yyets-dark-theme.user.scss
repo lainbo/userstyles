@@ -1,17 +1,3 @@
-/* ==UserStyle==
-@name:en 💡 TURN OFF THE LIGHT, YYeTs!
-@name 💡 关灯，人人影视！
-@namespace franciszhao
-@version 2.4.1
-@description:en A dark theme stylesheet for the website of YYeTs subtitle group.
-@description 一款适用于 YYeTs 人人影视网站的深色主题用户样式表。
-@author Francis Zhao <francis@n2o.io>
-@homepageURL https://n2o.io/go?page=userstyles
-@supportURL https://n2o.io/go?page=userstyles
-@license MIT
-@preprocessor default
-==/UserStyle== */
-
 // 外观定义
 
 $font-sans-serif: 'Source Han Sans SC', 'Noto Sans CJK SC', 'HanHei SC',
@@ -20,10 +6,10 @@ $font-sans-serif: 'Source Han Sans SC', 'Noto Sans CJK SC', 'HanHei SC',
   sans-serif, ui-sans-serif, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol', 'Noto Color Emoji', emoji;
 
-$font-monospace: 'Source Han Mono SC', 'Noto Sans Mono CJK SC',
-  'Source Code Pro', 'Noto Mono', 'SF Mono', 'Roboto Mono', 'Cascadia Code',
-  ui-monospace, monospace, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol', 'Noto Color Emoji', emoji;
+$font-monospace: 'Source Han Mono SC', 'Noto Sans Mono CJK SC', 'JetBrains Mono',
+  'Noto Mono', 'SF Mono', 'Roboto Mono', 'Cascadia Code', ui-monospace,
+  monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji', emoji;
 
 $color-link: #005083;
 $color-link-alt: #518248;

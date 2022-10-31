@@ -1,17 +1,3 @@
-/* ==UserStyle==
-@name:en Global Font: Adobe-branded
-@name 全局思源黑体
-@namespace franciszhao
-@version 2.4.0
-@description:en An user stylesheet to replace all fonts on web pages with Adobe-branded fonts, brings you a more unified and beautiful visual style.
-@description 一款使用 Adobe 品牌字体替换网页原有字体的用户样式表，为你呈现更统一美观的页面风格。
-@author Francis Zhao <francis@n2o.io>
-@homepageURL https://n2o.io/go?page=userstyles
-@supportURL https://n2o.io/go?page=userstyles
-@license MIT
-@preprocessor default
-==/UserStyle== */
-
 @use 'foundation';
 
 // 全局字体定义
@@ -62,7 +48,7 @@ $font-sans-serif-k-fallback: 'Noto Sans CJK KR', 'Apple SD Gothic Neo',
   foundation.$font-system-ui;
 
 // 等宽字体
-$font-monospace: 'Source Code Pro';
+$font-monospace: 'JetBrains Mono';
 $font-monospace-fallback: 'Noto Mono', 'SF Mono', 'Roboto Mono';
 
 $font-monospace-sc: 'Source Han Mono SC';
