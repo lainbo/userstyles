@@ -26,6 +26,25 @@
       }
     `;
   }
+  if (
+    location.hostname === 'feishu.cn' ||
+    location.hostname.endsWith('.feishu.cn')
+  ) {
+    css += `
+      #zh-CN button,
+      #zh-CN input,
+      #zh-CN select,
+      #zh-CN textarea {
+        font-family: 'HarmonyOS Sans SC', 'HarmonyOS', 'system-ui',
+          -apple-system, ui-sans-serif, sans-serif !important;
+      }
+      .code-block-content {
+         font-family: 'JetBrains Mono', 'Noto Sans Mono CJK SC',
+        'Source Code Pro', 'Noto Mono', 'SF Mono', 'Roboto Mono', ui-monospace,
+        monospace, 'Segoe UI Symbol' !important;
+      }
+    `;
+  }
    if (
     location.hostname === 'yuque.com' ||
     location.hostname.endsWith('.yuque.com')
